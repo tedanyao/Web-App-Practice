@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>homepage</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    </head>
+    <body>
+        <div class="container">
+            <h1>Homepage!!!</h1>      
+            <p>This is just a homepage demo~</p>
+        </div>
+
+        <!--<div class="container">-->
+        <!--    <form action="/" method="POST">-->
+        <!--        <input type="text" name="name" placeholder="enter something">-->
+        <!--        <input type="submit">-->
+        <!--    </form>-->
+        <!--</div>-->
+        
+        <div class="container">
+            <h5><a href="/campgrounds/new">Add new camps...</a></h5>
+            <h3>Your campgrounds:</h3>
+            <% campgrounds.forEach(function(camp) { %>
+               <li><%= camp.name %> - <a href="/campgrounds/<%= camp._id %>">more...</a></li>
+               <img src="<%= camp.image%>" alt="camp.name" style="height:200px;border:0;">
+            <% }) %>
+        </div>
+    </body>
+</html>

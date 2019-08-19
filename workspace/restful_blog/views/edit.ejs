@@ -1,0 +1,7 @@
+<h1>EDIT PAGE</h1>
+<form action="/blogs/<%=thisblog._id%>?_method=PUT" method="POST">
+    <input type="text" name="blog[title]" value=<%=thisblog.title%>>
+    <input type="text" name="blog[image]" value=<%=thisblog.image%>>
+    <input type="text" name="blog[body]" value=<%=thisblog.body%>>
+    <input type="submit">
+</form>

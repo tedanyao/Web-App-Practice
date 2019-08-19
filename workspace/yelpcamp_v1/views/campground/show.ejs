@@ -1,0 +1,22 @@
+<h1>Campgrounds: <%= camp.name %></h1>
+
+<li>name: <%=camp.name%></li>
+<img src="<%=camp.image%>" alt="camp.name">
+<li>description: <%=camp.description%></li>
+
+<div>
+Comments:
+</div>
+<% camp.comments.forEach(function(comm) { %>
+    <p><%= comm.author  %>: <%= comm.text %></p>
+<% }) %>
+
+<a href="/campgrounds/<%=camp._id%>/comments/new">Add comments...</a>
+
+<form action="/campgrounds">
+    <button>Return</button>
+</form>
+
+<form action="/campgrounds/<%=camp._id%>?_method=DELETE" method="POST">
+    <button>Delete</button>
+</form>

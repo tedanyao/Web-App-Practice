@@ -1,0 +1,12 @@
+<h1>INDEX PAGE</h1>
+
+<a href="/blogs/new">
+    add new...
+</a>
+
+<% blogs.forEach(function(blogs) { %>
+    <li><%= blogs.title%></li>
+    <a href="/blogs/<%= blogs._id %>">
+        read more...
+    </a>
+<% }) %>

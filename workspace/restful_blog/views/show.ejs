@@ -1,0 +1,10 @@
+<h1>SHOW PAGE</h1>
+<li><%= foundblog.title %></li>
+<li><%= foundblog.image %></li>
+<li><%= foundblog.body %></li>
+
+<a href="/blogs">return</a>
+<a href="/blogs/<%=foundblog._id%>/edit">EDIT</a>
+<form action="/blogs/<%=foundblog._id%>?_method=DELETE" method="POST">
+    <button>DELETE</button>
+</form>
